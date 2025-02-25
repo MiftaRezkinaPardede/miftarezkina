@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #e3f2fd;
+          color: #333;
+      }
+      header {
+          background-color: darkgreen;
+          color: white;
+          padding: 15px;
+          text-align: center;
+      }
+      nav ul {
+          list-style: none;
+          padding: 0;
+          text-align: center;
+      }
+      nav ul li {
+          display: inline;
+          margin: 0 15px;
+      }
+      nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      section {
+          padding: 20px;
+          margin: 20px;
+          background: white;
+          border-radius: 8px;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          text-align: justify;
+      }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 10px;
+      }
+      table, th, td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+      }
+      th {
+          background-color: darkgreen;
+          color: white;
+      }
+      button {
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+          width: 10%;}
+      footer {
+          text-align: center;
+          padding: 15px;
+          background-color: darkgreen;
+          color: white;
+      }
+  </style>
+</head>
+<body>
+  <header>
+      <h1>Perpustakaan Digital</h1>
+      <h1>Mifta ezkina Pardede</h1>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Me</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </nav>
+  </header>
+<section>
+    <main>
+      <h2>Formulir Pengaduan atau Saran</h2>
+      <form action="#" method="post">
+        <table>
+          <tr>
+            <th>Informasi</th>
+            <th>Detail</th>
+          </tr>
+          <tr>
+            <td>Nama</td>
+            <td><input type="text" name="nama" required placeholder="Masukkan nama Anda" /></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td><input type="email" name="email" required placeholder="Masukkan email Anda" /></td>
+          </tr>
+          <tr>
+            <td>Jenis Pengaduan</td>
+            <td>
+              <select name="jenis_pengaduan" required>
+                <option value="">Pilih jenis</option>
+                <option value="saran">Saran</option>
+                <option value="keluhan">Keluhan</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Pesan</td>
+            <td><textarea name="pesan" rows="4" required placeholder="Tulis pesan Anda"></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center">
+              <button type="submit">Kirim</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </main>
+  </section>
+  <footer>
+    <p>&copy; 2025 - Mifta Rezkina Pardede</p>
+</footer>
+  </body>
+</html>
+       
