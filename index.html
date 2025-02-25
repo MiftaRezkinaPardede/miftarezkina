@@ -1,12 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-<h><b> Perpustakaan Mifta Rezkina Pardede </h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            color: #333;
+        }
+        header {
+            background-color: darkgreen;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+        .book {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .book img {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .categories ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .categories ul li {
+            margin: 5px 0;
+        }
+        button {
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: darkgreen;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<h1>About Me</h1>
-<p><b>Selamat datang di Perpustakaan Saya</b></p>
-<h5> Halo, Selamat datang di Perpustakaan Mifta Rezkina Pardede, sebagai perpustakaan digital kami menawarkan berbagai koleksi seperti e-book, jurnal, artikel dan referensi akademik yang dapat mendukung kebutuhan belajar dan penelitian anda </h5>           
-<h2><a href="https://library.usu.ac.id">Perpustakaan Universitas Sumatera Utara</a></h2>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Perpustakaan Digital</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section id="home">
+        <div class="container">
+            <h2>Selamat datang di Perpustakaan Digital</h2>
+            <p>Temukan buku-buku favorit Anda dan akses layanan perpustakaan dengan mudah</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2>Daftar Buku Perpustakaan</h2>
+        <input type="text" id="search" class="search-box" placeholder="Cari buku..." onkeyup="searchBook()">
+        <ul class="book-list" id="bookList">
+            <li class="book-item">Buku Manajemen Perpustakaan Transformasi Perpustakaan Menuju Pelayanan Berbasis Digital <button onclick="borrowBook('Buku Manajemen Perpustakaan Transformasi Perpustakaan Menuju Pelayanan Berbasis Digital')">Pinjam</button></li>
+            <li class="book-item">Buku Sejarah Dunia yang di Sembunyikan  <button onclick="borrowBook('Buku Sejarah Dunia yang di Sembunyikan')">Pinjam</button></li>
+            <li class="book-item">Buku Sejarah Perkembangan Teknologi dan Komunikasi <button onclick="borrowBook('Buku Sejarah Perkembangan Teknologi dan Komunikasi')">Pinjam</button></li>
+        </ul>
+    </div>
+
+    <script>
+        function searchBook() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let books = document.querySelectorAll('.book-item');
+            books.forEach(book => {
+                let text = book.textContent.toLowerCase();
+                book.style.display = text.includes(input) ? '' : 'none';
+            });
+        }
+
+        function borrowBook(bookName) {
+            alert('Anda telah meminjam ' + bookName);
+        }
+    </script>
+</body><script>
+    function searchBook() {
+        let input = document.getElementById('search').value.toLowerCase();
+        let books = document.querySelectorAll('.book-item');
+        books.forEach(book => {
+            let text = book.textContent.toLowerCase();
+            book.style.display = text.includes(input) ? '' : 'none';
+        });
+    }
+
+    function borrowBook(bookName) {
+        alert('Anda telah meminjam ' + bookName);
+    }
+</script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Perpustakaan Digital. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
         
