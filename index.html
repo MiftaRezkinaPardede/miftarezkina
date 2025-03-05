@@ -92,49 +92,14 @@
     <section id="home">
         <div class="container">
             <h2>Selamat datang di Perpustakaan Digital</h2>
-            <p>Temukan buku-buku favorit Anda dan akses layanan perpustakaan dengan mudah</p>
+            <p>Temukan buku-buku favorit Anda dan akses layanan perpustakaan dengan mudah </p>
         </div>
     </section>
-
-    <div class="container">
-        <h2>Daftar Buku Perpustakaan</h2>
-        <input type="text" id="search" class="search-box" placeholder="Cari buku..." onkeyup="searchBook()">
-        <ul class="book-list" id="bookList">
-            <li class="book-item">Buku Manajemen Perpustakaan Transformasi Perpustakaan Menuju Pelayanan Berbasis Digital <button onclick="borrowBook('Buku Manajemen Perpustakaan Transformasi Perpustakaan Menuju Pelayanan Berbasis Digital')">Pinjam</button></li>
-            <li class="book-item">Buku Sejarah Dunia yang di Sembunyikan  <button onclick="borrowBook('Buku Sejarah Dunia yang di Sembunyikan')">Pinjam</button></li>
-            <li class="book-item">Buku Sejarah Perkembangan Teknologi dan Komunikasi <button onclick="borrowBook('Buku Sejarah Perkembangan Teknologi dan Komunikasi')">Pinjam</button></li>
-        </ul>
-    </div>
-
-    <script>
-        function searchBook() {
-            let input = document.getElementById('search').value.toLowerCase();
-            let books = document.querySelectorAll('.book-item');
-            books.forEach(book => {
-                let text = book.textContent.toLowerCase();
-                book.style.display = text.includes(input) ? '' : 'none';
-            });
-        }
-
-        function borrowBook(bookName) {
-            alert('Anda telah meminjam ' + bookName);
-        }
-    </script>
-</body><script>
-    function searchBook() {
-        let input = document.getElementById('search').value.toLowerCase();
-        let books = document.querySelectorAll('.book-item');
-        books.forEach(book => {
-            let text = book.textContent.toLowerCase();
-            book.style.display = text.includes(input) ? '' : 'none';
-        });
-    }
-
-    function borrowBook(bookName) {
-        alert('Anda telah meminjam ' + bookName);
-    }
+    <section id="home">
+    <h3>Collaboration</h3>
+    <p>Perpustakaan Dwi Putri Aulia bekerja sama dengan <a href="https://library.uns.ac.id/" target="_blank">Cyber Library Universitas Sebelas Maret</a></p>
+</section>
 </script>
-
     <!-- Footer -->
     <footer>
         <div class="container">
