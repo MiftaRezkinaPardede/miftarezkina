@@ -85,28 +85,25 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
-        </div>
     </header>
 
-    <!-- Main Section -->
+    <section id="home">
+        <input type="text" id="search" placeholder="Cari buku...">
+        <button onclick="searchBook()">Cari</button>
+    </section>
+
     <section id="home">
         <div class="container">
             <h2>Selamat datang di Perpustakaan Digital</h2>
-            <p>Temukan buku-buku favorit Anda dan akses layanan perpustakaan dengan mudah </p>
+            <p>Temukan berbagai koleksi yang tersedia ataupun buku buku favorit anda dengan akses layanan yang mudah</p>
         </div>
     </section>
-    <section id="home">
-    <h3>Collaboration</h3>
-    <p>Perpustakaan bekerja sama dengan <a href="https://library.uns.ac.id/" target="_blank">Cyber Library Universitas Sebelas Maret</a></p>
-</section>
-</script>
-    <!-- Footer -->
-    <footer>
         <div class="container">
             <p>&copy; 2025 Perpustakaan Digital. All rights reserved.</p>
         </div>
     </footer>
-   <script>
+
+    <script>
         function borrowBook(bookTitle) {
             let list = document.getElementById("borrowed-list");
             let item = document.createElement("li");
@@ -119,4 +116,3 @@
     </script>
 </body>
 </html>
-        
