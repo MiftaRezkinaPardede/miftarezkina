@@ -147,6 +147,90 @@
     <p>Perpustakaan digital berkolaborasi dengan <a href="https://library.uns.ac.id/" target="_blank"> Library Universitas Sebelas Maret <a></p>
         <p> Memiliki peran penting dalam memperluas akses dan penyebaran informasi. Melalui kerja sama ini, perpustakaan dapat menghadirkan berbagai sumber daya yang lebih kaya, mulai dari koleksi buku dan jurnal digital hingga seminar, lokakarya, dan diskusi ilmiah yang bermanfaat bagi masyarakat luas. Dengan sinergi yang baik, perpustakaan tidak hanya menjadi pusat penyimpanan pengetahuan, tetapi juga jembatan bagi pertukaran informasi yang lebih luas, sehingga mampu meningkatkan literasi, penelitian, dan inovasi di berbagai bidang.</p>
 </script>
+    </section>
+     <!-- Main Section -->
+     <section id="home">
+        <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Novel populer di Perpustakaan Digital</title>
+    <style>
+        }
+        .book-list {
+            list-style: none;
+            padding: 0;
+        }
+        .book-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .book-details {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .book-cover {
+            max-width: 200px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Koleksi Novel di Perpustakaan Digital</h1>
+        <ul class="book-list" id="book-list">
+            <!-- Data buku akan ditambahkan secara dinamis -->
+        </ul>
+        <div class="book-details" id="book-details">
+            <h2 id="book-title"></h2>
+            <p><strong>Penulis:</strong> <span id="book-author"></span></p>
+            <p><strong>Deskripsi:</strong> <span id="book-description"></span></p>
+            <img id="book-cover" class="book-cover" src="" alt="Cover Buku">
+        </div>
+    </div>
+
+    <script>
+        const books = [
+            { title: "Laskar Pelangi", author: "Andrea Hirata", description: "Kisah inspiratif tentang anak-anak di Belitung yang penuh semangat belajar.", cover: "https://www.google.com/imgres?q=cover%20laskar%20pelangi&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fid%2F8%2F8e%2FLaskar_pelangi_sampul.jpg&imgrefurl=https%3A%2F%2Fid.wikipedia.org%2Fwiki%2FLaskar_Pelangi&docid=8tTy3JXEJuiyJM&tbnid=l4khqQpLOwKGaM&vet=12ahUKEwi8hoD2n5WMAxUd8TgGHfNsN5wQM3oECBsQAA..i&w=300&h=463&hcb=2&ved=2ahUKEwi8hoD2n5WMAxUd8TgGHfNsN5wQM3oECBsQAA" },
+            { title: "Bumi Manusia", author: "Pramoedya Ananta Toer", description: "Novel sejarah yang mengisahkan kehidupan Minke dan percintaannya di era kolonial.", cover: "https://www.google.com/imgres?q=cover%20lBumi%20Manusia%20-%20Pramoedya%20Ananta%20Toeri&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fms%2F7%2F74%2FBumimanusia_big.gif&imgrefurl=https%3A%2F%2Fms.wikipedia.org%2Fwiki%2FBumi_Manusia_(novel)&docid=htZbb-Jf8GDOhM&tbnid=S2DwqEjmggVwKM&vet=12ahUKEwii9MeFopWMAxWe8zgGHY1eAOEQM3oECFIQAA..i&w=591&h=823&hcb=2&ved=2ahUKEwii9MeFopWMAxWe8zgGHY1eAOEQM3oECFIQAA" },
+            { title: "Dilan 1990", author: "Pidi Baiq", description: "Cerita romansa antara Milea dan Dilan yang penuh dengan gaya bahasa unik.", cover: "https://www.google.com/imgres?q=cover%20buku%20dilan%201990%20wikipdi&imgurl=https%3A%2F%2Fblokbojonegoro.com%2Fupload%2FImage%2Fimage_74_img_20180623_081356.jpg&imgrefurl=https%3A%2F%2Fblokbojonegoro.com%2F2018%2F06%2F23%2Fdilan-dia-adalah-dilanku-tahun-1990%2F&docid=Wv59DjszV6pKaM&tbnid=NASvHBfp70VitM&vet=12ahUKEwj3ivrPopWMAxWWxTgGHYZdAEIQM3oECBkQAA..i&w=629&h=914&hcb=2&ved=2ahUKEwj3ivrPopWMAxWWxTgGHYZdAEIQM3oECBkQAA" },
+            { title: "Negeri 5 Menara", author: "Ahmad Fuadi", description: "Perjalanan enam santri dalam meraih mimpi di pesantren.", cover: "https://www.google.com/imgres?q=cover%20Negeri%205%20Menara%20-%20Ahmad%20Fuadi&imgurl=https%3A%2F%2Febooks.gramedia.com%2Febook-covers%2F1682%2Fimage_highres%2FID_GPU2013MTH02NLM.jpg&imgrefurl=https%3A%2F%2Febooks.gramedia.com%2Fbooks%2Fnegeri-5-menara&docid=Yo7RtsZLxSaxVM&tbnid=ZFUVqxHV1_O22M&vet=12ahUKEwiQsOvuopWMAxXc2TgGHTjJMu8QM3oECBUQAA..i&w=760&h=1127&hcb=2&ved=2ahUKEwiQsOvuopWMAxXc2TgGHTjJMu8QM3oECBUQAA" }
+        ];
+
+        const bookList = document.getElementById("book-list");
+        const bookDetails = document.getElementById("book-details");
+        const bookTitle = document.getElementById("book-title");
+        const bookAuthor = document.getElementById("book-author");
+        const bookDescription = document.getElementById("book-description");
+        const bookCover = document.getElementById("book-cover");
+
+        books.forEach((book, index) => {
+            const li = document.createElement("li");
+            li.textContent = `${book.title} - ${book.author}`;
+            li.onclick = () => showDetails(index);
+            bookList.appendChild(li);
+        });
+
+        function showDetails(index) {
+            const book = books[index];
+            bookTitle.textContent = book.title;
+            bookAuthor.textContent = book.author;
+            bookDescription.textContent = book.description;
+            bookCover.src = book.cover;
+            bookCover.alt = `Cover dari ${book.title}`;
+            bookDetails.style.display = "block";
+        }
+    </script>
+   
+    </script>
     <!-- Footer -->
     <footer>
         <div class="container">
