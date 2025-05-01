@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulir Pengunjung - Perpustakaan Indriani Ramadhan</title>
+    <title>Formulir Pengunjung - Perpustakaan Digital Mifta Rezkina Pardede</title>
 </head>
 <body>
     <h2>Formulir Data Pengunjung</h2>
@@ -31,7 +31,7 @@
             <option value="Mahasiswa">Mahasiswa</option>
             <option value="Dosen">Dosen</option>
             <option value="Tenaga Pendidik">Tenaga Pendidik</option>
-             <option value="Pustakawan">Pustakawan</option>
+            <option value="Pustakawan">Pustakawan</option>
             <option value="Staff">Staff</option>
         </select><br><br>
 
