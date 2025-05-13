@@ -1,215 +1,224 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perpustakaan Digital</title>
-    <style>
-        .marquee-container {
-            width: 100%;
-            background-color: darkgreen;
-            color: rgb(228, 228, 228);
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            padding: 10px 0;
-            box-shadow: 0 4px 8px rgba(4, 66, 16, 0.2);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perpustakaan Digital</title>
 
-        .marquee {
-            display: inline-block;
-            white-space: nowrap;
-            animation: scroll-left 10s linear infinite;
-            font-size: 20px;
-            padding-left: 100%;
-        }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
-        @keyframes scroll-left {
-            from { transform: translateX(0); }
-            to { transform: translateX(-100%); }
-        }
+  <style>
+    .marquee-container {
+      width: 100%;
+      background-color: darkgreen;
+      color: rgb(228, 228, 228);
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      padding: 10px 0;
+      box-shadow: 0 4px 8px rgba(4, 66, 16, 0.2);
+      z-index: 999;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e3f2fd;
-            color: #333;
-        }
+    .marquee {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 10s linear infinite;
+      font-size: 20px;
+      padding-left: 100%;
+    }
 
-        header {
-            background-color: darkgreen;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
+    @keyframes scroll-left {
+      from { transform: translateX(0); }
+      to { transform: translateX(-100%); }
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-top: 70px;
+      background-color: #e3f2fd;
+    }
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+    .book img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: justify;
-        }
-
-        .book {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .book img {
-            width: 100px;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: darkgreen;
-            color: white;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: darkgreen;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="marquee-container">
-        <div class="marquee" id="marqueeText">Selamat Datang di Perpustakaan - Tempat Ilmu dan Pengetahuan Berkumpul</div>
+  <!-- Hero Section -->
+  <section class="hero-section text-white d-flex align-items-center" style="background-image: url('https://images.unsplash.com/photo-1581093588401-022b35b1a7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; height: 400px;">
+    <div class="container text-center">
+      <h1 class="fw-bold display-5">Perpustakaan Digital</h1>
+      <p class="lead">Akses pengetahuan di ujung jari Anda</p>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-container">
+    <div class="marquee" id="marqueeText">Selamat Datang di Perpustakaan - Tempat Ilmu dan Pengetahuan Berkumpul</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success mt-5">
+    <div class="container">
+      <a class="navbar-brand" href="#">Perpustakaan</a>
+      <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggle-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Konten Utama -->
+  <div class="container my-5">
+    <div class="bg-white p-4 rounded shadow">
+      <h2>Selamat datang di Perpustakaan Digital Mifta Rezkina Pardede</h2>
+      <p>Halo! Selamat datang di Perpustakaan Digital, tempat di mana Anda dapat mengakses berbagai koleksi buku, jurnal, artikel, dan sumber informasi lainnya secara mudah dan praktis.</p>
+      <p>Perpustakaan digital ini dirancang untuk mendukung kebutuhan literasi dan riset dengan menyediakan akses ke berbagai koleksi elektronik yang dapat diakses kapan saja dan di mana saja.</p>
     </div>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Perpustakaan Digital</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="bg-white p-4 mt-4 rounded shadow">
+      <h3>Collaboration</h3>
+      <p>Perpustakaan digital berkolaborasi dengan <a href="https://library.uns.ac.id/" target="_blank">Library Universitas Sebelas Maret</a>.</p>
+      <p>Melalui kerja sama ini, perpustakaan digital dapat menghadirkan berbagai sumber daya yang lebih kaya...</p>
+    </div>
 
-    <!-- Main Section -->
-    <section>
-        <div class="container">
-            <h2>Selamat datang di Perpustakaan Digital Mifta Rezkina Pardede</h2>
-            <p>Halo! Selamat datang di Perpustakaan Digital, tempat di mana Anda dapat mengakses berbagai koleksi buku, jurnal, artikel, dan sumber informasi lainnya secara mudah dan praktis. Kami berkomitmen untuk memberikan layanan terbaik bagi para pencari ilmu, peneliti, pelajar, dan masyarakat umum yang membutuhkan referensi berkualitas.</p>
-            <p>Perpustakaan digital ini dirancang untuk mendukung kebutuhan literasi dan riset dengan menyediakan akses ke berbagai koleksi elektronik yang dapat diakses kapan saja dan di mana saja. Kami juga berkomitmen untuk terus memperbarui dan memperluas koleksi agar Anda selalu mendapatkan informasi terkini dan relevan. Mari manfaatkan website perpustakaan digital ini untuk memperkaya wawasan dan mendukung pengembangan ilmu pengetahuan.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Collaboration</h3>
-        <p>Perpustakaan digital berkolaborasi dengan <a href="https://library.uns.ac.id/" target="_blank">Library Universitas Sebelas Maret</a>.</p>
-        <p>Melalui kerja sama ini, perpustakaan digital dapat menghadirkan berbagai sumber daya yang lebih kaya, mulai dari koleksi buku dan jurnal digital hingga seminar, lokakarya, dan diskusi ilmiah yang bermanfaat bagi masyarakat luas.</p>
-    </section>
-
-    <!-- Section: Koleksi Buku -->
-    <section>
+     <!-- Pencarian -->
+     <div class="bg-white p-4 mt-4 rounded shadow">
         <h3>Daftar Koleksi Ebook</h3>
-
-        <!-- Input Pencarian -->
-        <div style="margin-bottom: 20px;">
-            <input type="text" id="searchInput" onkeyup="filterBooks()" placeholder="Cari judul buku..." style="width: 100%; padding: 10px; font-size: 16px;">
+        <input type="text" id="searchInput" onkeyup="filterBooks()" placeholder="Cari judul buku…" class="form-control mb-4"/>
+  
+        <!-- Daftar Buku -->
+        <div class="book d-flex mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/id/8/8e/Laskar_pelangi_sampul.jpg" alt="Laskar Pelangi">
+          <div class="ms-3">
+            <strong>Laskar Pelangi</strong>
+            <p>Penulis : Andrea Hirata</p>
+            <p>Kisah inspiratif tentang perjuangan 10 anak dari keluarga miskin di Belitung...</p>
+            <a href="https://drive.google.com/file/d/1te23F_qGL5aeg6WwVgnkq0AphS6tOazl/view?usp=drivesdk" class="btn btn-sm btn-success" target="_blank">Baca di sini</a>
         </div>
+    </div>
 
-        <div class="book">
-            <img src="https://upload.wikimedia.org/wikipedia/id/8/8e/Laskar_pelangi_sampul.jpg" alt="Laskar Pelangi">
-            <div>
-                <strong>Laskar Pelangi</strong>
-                <p>Penulis : Andrea Hirata </p>
-                <p>kisah inspiratif tentang perjuangan 10 anak dari keluarga miskin di Belitung yang memiliki semangat belajar luar biasa</p>   
-                <a href="https://drive.google.com/file/d/1te23F_qGL5aeg6WwVgnkq0AphS6tOazl/view?usp=drivesdk" target="_blank">Baca di sini</a>
+    <div class="book d-flex mb-4">
+      <img src="https://upload.wikimedia.org/wikipedia/id/1/1f/Bumi_Manusia.jpg" alt="Bumi Manusia">
+      <div class="ms-3">
+        <strong>Bumi Manusia</strong>
+        <p>Penulis : Pramoedya Ananta Toer</p>
+        <p>Buku menceritakan perjuangan seorang pribumi bernama Minke dalam melawan kolonialisme.</p>
+        <a href="https://drive.google.com/file/d/1tf2lu--innhvRSpFV6FCwH1DEXIteWNE/view?usp=drivesdk" class="btn btn-sm btn-success" target="_blank">Baca di sini</a>
+      </div>
+    </div>
+
+    <div class="book d-flex mb-4">
+      <img src="https://cdn.gramedia.com/uploads/items/9786024246945_Laut_Bercerita.jpg" alt="Laut Bercerita">
+      <div class="ms-3">
+        <strong>Laut Bercerita</strong>
+        <p>Penulis : Leila Salikha Chudori</p>
+        <p>Novel mengisahkan kisah nyata penculikan aktivis mahasiswa pada masa Orde Baru.</p>
+        <a href="https://drive.google.com/file/d/1tlpDV-CANKq8BbJxUzoP_xKTAlwHkJQZ/view?usp=drivesdk" class="btn btn-sm btn-success" target="_blank">Baca di sini</a>
+      </div>
+    </div>
+
+    <div class="book d-flex mb-4">
+      <img src="https://ebooks.gramedia.com/ebook-covers/1682/image_highres/ID_GPU2013MTH02NLM.jpg" alt="Negeri 5 Menara">
+      <div class="ms-3">
+        <strong>Negeri 5 Menara</strong>
+        <p>Penulis : Ahmad Fuadi</p>
+        <p>Kisah Alif dan teman-temannya di pesantren yang bercita-cita menjelajahi dunia...</p>
+        <a href="https://drive.google.com/file/d/1tlrR4em3DU0AkFvZ_zgcDLAK95F7X45D/view?usp=drivesdk" class="btn btn-sm btn-success" target="_blank">Baca di sini</a>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+  <!-- Upcoming Events Section (DIPERBAIKI) -->
+  <section class="new-books py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center"> Events</h2>
+      <div class="row g-4">
+
+        <!-- Event 1 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow">
+            <a href="https://library.uns.ac.id/pameran-inovasi-perpustakaan-perguruan-tinggi/" target="_blank">
+              <img src="https://library.uns.ac.id/wp-content/uploads/2024/04/photo1713413925.jpeg"
+                   class="card-img-top rounded-top" alt="Pameran Inovasi Perpustakaan">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="https://library.uns.ac.id/pameran-inovasi-perpustakaan-perguruan-tinggi/" target="_blank" style="text-decoration: none; color: #003366;">
+                  Pameran Inovasi Perpustakaan Perguruan Tinggi
+                </a>
+              </h5>
+              <p class="card-text">Pameran inovasi antar perguruan tinggi dalam pengembangan layanan dan teknologi perpustakaan.</p>
             </div>
+          </div>
         </div>
 
-        <div class="book">
-            <img src="https://images.app.goo.gl/W9qNuTprPiaKgNch9" alt="Bumi Manusia">
-            <div>
-                <strong>Bumi Manusia</strong>
-                <p>Penulis : Pramoedya Ananta Toer </p>
-                <p>Buku menceritakan perjuangan seorang pribumi bernama Minke dalam melawan penindasan kolonial di Hindia Belanda.</p>  
-                <a href="https://drive.google.com/file/d/1tf2lu--innhvRSpFV6FCwH1DEXIteWNE/view?usp=drivesdk" target="_blank">Baca di sini</a>
+        <!-- Event 2 -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow">
+            <a href="https://library.uns.ac.id/seminar-nasional-sinergi-bank-indonesia-dan-kampus-dalam-mengembangkan-literasi-umkm-mahasiswa-sebagai-generasi-wirausaha-muda/" target="_blank">
+              <img src="https://library.uns.ac.id/wp-content/uploads/2024/05/photo1715231363.jpeg"
+                   class="card-img-top rounded-top" alt="Seminar Nasional Literasi UMKM">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="https://library.uns.ac.id/seminar-nasional-sinergi-bank-indonesia-dan-kampus-dalam-mengembangkan-literasi-umkm-mahasiswa-sebagai-generasi-wirausaha-muda/" target="_blank" style="text-decoration: none; color: #003366;">
+                  Seminar Nasional: Literasi UMKM & Wirausaha Mahasiswa
+                </a>
+              </h5>
+              <p class="card-text">Kolaborasi UNS dan Bank Indonesia mendorong literasi finansial & kewirausahaan di kalangan mahasiswa.</p>
             </div>
+          </div>
         </div>
 
-        <div class="book">
-            <img src="https://images.app.goo.gl/ompufZyampDU72Kj7" alt="Dilan 1990">
-            <div>
-                <strong>Laut Bercerita</strong>
-                <p>Penulis : Leila Salikha Chudori </p>
-                <p>Novel mengisahkan kisah nyata penculikan dan perwalian aktivis mahasiswa pada masa Orde Baru, khususnya di tahun 1998.</p>
-                <a href="https://drive.google.com/file/d/1tlpDV-CANKq8BbJxUzoP_xKTAlwHkJQZ/view?usp=drivesdk" target="_blank">Baca di sini</a>
-            </div>
-        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="book">
-            <img src="https://ebooks.gramedia.com/ebook-covers/1682/image_highres/ID_GPU2013MTH02NLM.jpg" alt="Negeri 5 Menara">
-            <div>
-                <strong>Negeri 5 Menara</strong>
-                <p>Penulis : Ahmad Fuadi </p>
-                <p>Kisah Alif dan teman-temannya di pesantren yang bercita-cita menjelajahi dunia, Novel ini penuh semangat dan inspirasi untuk para pemuda.</p> 
-                <a href="https://drive.google.com/file/d/1tlrR4em3DU0AkFvZ_zgcDLAK95F7X45D/view?usp=drivesdk" target="_blank">Baca di sini</a>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Perpustakaan Digital. All rights reserved.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Perpustakaan Digital. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Bootstrap JS + Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function filterBooks() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const books = document.querySelectorAll(".book");
 
-    <script>
-        function borrowBook(bookTitle) {
-            let list = document.getElementById("borrowed-list");
-            let item = document.createElement("li");
-            item.textContent = bookTitle;
-            list.appendChild(item);
+      books.forEach(function (book) {
+        const title = book.querySelector("strong").textContent.toLowerCase();
+        const author = book.querySelector("p").textContent.toLowerCase();
+        const description = book.querySelectorAll("p")[1]?.textContent.toLowerCase() || "";
+
+        if (title.includes(input) || author.includes(input) || description.includes(input)) {
+          book.style.display = "flex";
+        } else {
+          book.style.display = "none";
         }
-
-        function searchBook() {
-            alert("Fitur pencarian sedang dalam pengembangan");
-        }
-
-        function filterBooks() {
-            const input = document.getElementById("searchInput").value.toLowerCase();
-            const books = document.querySelectorAll(".book");
-
-            books.forEach(function(book) {
-                const title = book.querySelector("strong").textContent.toLowerCase();
-                const author = book.querySelector("p").textContent.toLowerCase();
-                const description = book.querySelectorAll("p")[1]?.textContent.toLowerCase() || "";
-
-                if (title.includes(input) || author.includes(input) || description.includes(input)) {
-                    book.style.display = "flex";
-                } else {
-                    book.style.display = "none";
-                }
-            });
-        }
-    </script>
+      });
+    }
+  </script>
 </body>
 </html>
