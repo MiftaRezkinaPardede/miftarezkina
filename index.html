@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -72,10 +71,11 @@
       color: white !important;
     }
 
-    .navbar .nav-link.active {
-      font-weight: bold;
-      color: var(--secondary-color) !important;
-    }
+   .navbar .nav-link.active {
+    color: white !important;
+  }
+
+
 
     .cookie-banner {
   position: fixed;
@@ -169,33 +169,48 @@
     <div class="marquee" id="marqueeText">Selamat Datang di Perpustakaan - Tempat Ilmu dan Pengetahuan Berkumpul</div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5">
-    <div class="container">
-      <a class="navbar-brand" href="#">Perpustakaan</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5">
+  <div class="container">
+    <a class="navbar-brand" href="#">Perpustakaan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Me</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+        <!-- Dropdown untuk submenu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            Resources
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="Forum Diskusi.html">Discussion Forum</a></li>
+            <li><a class="dropdown-item" href="Task.html">Task</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Konten Utama -->
   <div class="container my-5">
     <div class="bg-white p-4 rounded shadow">
-      <h2>HAllo Everyone</h2>
+      <h2>Hallo Everyone</h2>
       <p>Selamat datang di Perpustakaan Mifta Rezkina Pardede, tempat di mana Anda dapat mengakses berbagai koleksi buku, jurnal, artikel, dan sumber informasi lainnya secara mudah dan praktis.</p>
       <p>Perpustakaan digital ini dirancang untuk mendukung kebutuhan literasi dan riset dengan menyediakan akses ke berbagai koleksi elektronik yang dapat diakses kapan saja dan di mana saja.</p>
     </div>
@@ -255,47 +270,105 @@
   </div>
 
   <!-- Events -->
-  <section class="new-books py-5 bg-light">
-    <div class="container">
-      <h2 class="mb-4 text-center">Events</h2>
-      <div class="row g-4">
+ <section class="events-section py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">Event Terbaru</h2>
+    <div class="row g-4">
 
-        <div class="col-md-6">
-          <div class="card h-100 shadow border-0">
-            <img src="https://library.uns.ac.id/wp-content/uploads/2024/04/photo1713413925.jpeg"
-                 class="card-img-top img-fluid rounded-top" alt="Pameran Inovasi Perpustakaan">
-            <div class="card-body">
-              <h5 class="card-title text-success fw-bold">Pameran Inovasi Perpustakaan Perguruan Tinggi</h5>
-              <p class="card-text">Pameran inovasi antar perguruan tinggi dalam pengembangan layanan dan teknologi perpustakaan.</p>
-            </div>
-            <div class="card-footer bg-white border-0 text-center pb-4">
-              <a href="https://library.uns.ac.id/pameran-inovasi-perpustakaan-perguruan-tinggi/" target="_blank" class="btn btn-success px-4">Lihat Selengkapnya</a>
-            </div>
+      <div class="col-md-6">
+        <div class="card h-100 shadow border-0">
+          <img src="https://library.uns.ac.id/wp-content/uploads/2024/05/photo1721510040.jpeg" 
+               class="card-img-top img-fluid rounded-top" alt="Bedah Buku Rindu Menanti Bonong">
+          <div class="card-body">
+            <h5 class="card-title text-success fw-bold">Bedah Buku Rindu Menanti Bonong</h5>
+            <p class="card-text">Diskusi mendalam tentang buku 'Rindu Menanti Bonong' yang menghadirkan refleksi budaya dan sosial masyarakat.</p>
+          </div>
+          <div class="card-footer bg-white border-0 text-center pb-4">
+            <a href="https://library.uns.ac.id/bedah-buku-rindu-menanti-bonong/" target="_blank" class="btn btn-success px-4">Lihat Selengkapnya</a>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6">
-          <div class="card h-100 shadow border-0">
-            <img src="https://library.uns.ac.id/wp-content/uploads/2024/05/photo1715231363.jpeg"
-                 class="card-img-top img-fluid rounded-top" alt="Seminar Nasional Literasi UMKM">
-            <div class="card-body">
-              <h5 class="card-title text-success fw-bold">Seminar Nasional: Literasi UMKM & Wirausaha Mahasiswa</h5>
-              <p class="card-text">Kolaborasi UNS dan Bank Indonesia mendorong literasi finansial & kewirausahaan di kalangan mahasiswa.</p>
-            </div>
-            <div class="card-footer bg-white border-0 text-center pb-4">
-              <a href="https://library.uns.ac.id/seminar-nasional-sinergi-bank-indonesia-dan-kampus-dalam-mengembangkan-literasi-umkm-mahasiswa-sebagai-generasi-wirausaha-muda/" target="_blank" class="btn btn-success px-4">Lihat Selengkapnya</a>
-            </div>
+      <div class="col-md-6">
+        <div class="card h-100 shadow border-0">
+          <img src="https://library.uns.ac.id/wp-content/uploads/2024/03/photo1709847839.jpeg" 
+               class="card-img-top img-fluid rounded-top" alt="Seminar dan Workshop Nasional">
+          <div class="card-body">
+            <h5 class="card-title text-success fw-bold">Seminar dan Workshop Nasional: Publikasi Karya Ilmiah di Era Society 5.0</h5>
+            <p class="card-text">Konsorsium Jurnal bidang Perpustakaan dan Kearsipan menggelar seminar untuk memperkuat publikasi ilmiah di era Society 5.0.</p>
+          </div>
+          <div class="card-footer bg-white border-0 text-center pb-4">
+            <a href="https://library.uns.ac.id/seminar-dan-workshop-nasional-publikasi-karya-ilmiah-di-era-society-5-0-konsorsium-jurnal-bidang-perpustakaan-dan-kearsipan/" target="_blank" class="btn btn-success px-4">Lihat Selengkapnya</a>
           </div>
         </div>
+      </div>
 
+    </div>
+  </div>
+</section>
+
+  <footer class="text-white pt-5 pb-3" style="background-color: darkgreen;">
+  <div class="container">
+    <div class="row">
+      <!-- Tentang -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Tentang</h5>
+        <p>
+          Perpustakaan Digital Mifta Rezkina Pardede menyediakan akses informasi, literatur akademik, dan pengembangan literasi digital untuk semua kalangan pembelajar.
+        </p>
+      </div>
+
+      <!-- Akun Media Sosial -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Akun Media Sosial</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.instagram.com/mifta_prd" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+              <img src="https://cdn-icons-png.flaticon.com/24/174/174855.png" alt="Instagram" class="me-2">
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="mailto:miftarezkina@gmail.com" class="text-white text-decoration-none d-flex align-items-center">
+              <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png" alt="Email" class="me-2">
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/share/1PhYGnPvPu/" class="text-white text-decoration-none d-flex align-items-center">
+              <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" class="me-2">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/mifta-rezkina-pardede-740822345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-white text-decoration-none d-flex align-items-center">
+              <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn" class="me-2">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase">Langganan Newsletter</h5>
+        <p>Dapatkan info terbaru tentang fitur dan koleksi digital kami.</p>
+        <form>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Email Anda" required>
+            <button class="btn btn-light" type="submit">Langganan</button>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Perpustakaan Digital. All rights reserved.</p>
-  </footer>
+    <hr class="border-top border-light">
+
+    <div class="text-center mt-3">
+      &copy; 2025 Mifta Rezkina Pardede. All rights reserved.
+    </div>
+  </div>
+</footer>
 
   <!-- Cookie Banner -->
   <div id="cookieBanner" class="cookie-banner">
