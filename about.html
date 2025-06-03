@@ -109,18 +109,38 @@
     </div>
   </section>
 
-  <!-- Navbar di bawah Hero -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkgreen;">
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5">
   <div class="container">
     <a class="navbar-brand" href="#">Perpustakaan</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Me</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+        <!-- Dropdown untuk submenu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            Resources
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="Forum Diskusi.html">Discussion Forum</a></li>
+            <li><a class="dropdown-item" href="Task.html">Task</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
