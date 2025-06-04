@@ -1,0 +1,303 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Data - Perpustakaan Digital - Mifta Rezkina Pardede</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Marquee Styling */
+    .marquee-container {
+      width: 100%;
+      background-color: darkgreen;
+      color: white;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 12px 0;
+      z-index: 1050;
+      box-shadow: 0 4px 8px darkgreen;
+      display: flex;
+      align-items: center;
+    }
+
+    .marquee {
+      white-space: nowrap;
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 18s linear infinite;
+      font-size: 18px;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .hero-section {
+      margin-top: 60px; /* agar tidak tertutup marquee */
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background-image: url("https://demo.perpusdigital.com/uploads/YUY1VmdiVEJON1hyMHY0Mm9sbktSQT09/post/alasan-mengapa-beralih-ke-perpustakaan-digital_1697012268.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    section {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      text-align: justify;
+    }
+
+    .navbar {
+    background-color: #2e7d32 !important;
+    }
+    .navbar-brand, .nav-link, .dropdown-item {
+    color: white !important;
+    }
+    .navbar-nav .nav-link:hover,
+    .dropdown-item:hover {
+    color: #a5d6a7 !important;
+    }
+
+    .table thead {
+    background-color: #a5d6a7;
+    color: #1b5e20;
+    text-align: center;
+    }
+
+    .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+    }
+
+    .table-bordered {
+    border-color: #c8e6c9;
+    }
+
+    .table td, .table th {
+    vertical-align: middle;
+    }
+
+    footer {
+      background-color: darkgreen;
+      color: white;
+      padding: 30px 0;
+    }
+
+    .footer-title {
+      font-weight: bold;
+      color: rgb(235, 235, 235);
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #1aa81a !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Marquee -->
+  <div class="marquee-container">
+    <div class="marquee">Selamat Datang di Perpustakaan Digital - Tempat Ilmu dan Pengetahuan Berkumpul</div>
+  </div>
+
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="fw-bold display-5">Halo, saya Mifta</h1>
+      <p class="lead">Task Data, Kumpulan tugas kuliah yang tersusun rapi dan siap diunduh</p>
+    </div>
+  </section>
+
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-5">
+  <div class="container">
+    <a class="navbar-brand" href="#">Perpustakaan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Me</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+        <!-- Dropdown untuk submenu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            Resources
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="forumdiskusi.html">Discussion Forum</a></li>
+            <li><a class="dropdown-item" href="task.html">Task</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+    .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #1aa81a !important;
+  }
+</style>
+
+<!-- Section Tugas -->
+<section class="container my-5 p-4 bg-white shadow rounded">
+  <h2 class="text-center text-success mb-4">Daftar Tugas Kuliah</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead style="background-color: #a5d6a7; color: #1b5e20;" class="text-center">
+        <tr>
+          <th style="width: 5%;">No</th>
+          <th style="width: 35%;">Judul Tugas</th>
+          <th style="width: 40%;">Mata Kuliah</th>
+          <th style="width: 20%;">Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center">1</td>
+          <td>Tabel Perkalian 10 x 10</td>
+          <td>Pengembangan Web Perpustakaan-Praktik</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-success btn-sm rounded-pill px-3">Lihat Tugas</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">2</td>
+          <td>Formulir Pengunjung</td>
+          <td>Pengembangan Web Perpustakaan-Praktik</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-success btn-sm rounded-pill px-3">Lihat Tugas</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">3</td>
+          <td>Database Dosen dan Mahasiswa</td>
+          <td>Pengembangan Web Perpustakaan-Praktik</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-success btn-sm rounded-pill px-3">Lihat Tugas</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">4</td>
+          <td>Menyisipkan keahlian pada CV</td>
+          <td>Pengembangan Web Perpustakaan-Praktik</td>
+          <td class="text-center">
+            <a href="#" class="btn btn-success btn-sm rounded-pill px-3">Lihat Tugas</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+       <!-- Footer -->
+  <footer class="text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <!-- Tentang -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase">Tentang</h5>
+          <p>
+            Perpustakaan Digital Mifta Rezkina Pardede menyediakan akses informasi, literatur akademik, dan pengembangan literasi digital untuk semua kalangan pembelajar.
+          </p>
+        </div>
+
+        <!-- Sosial Media -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase">Akun Media Sosial</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://www.instagram.com/mifta_prd" target="_blank" class="text-white text-decoration-none d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/24/174/174855.png" alt="Instagram" class="me-2">Instagram
+              </a>
+            </li>
+            <li>
+              <a href="mailto:miftarezkina@gmail.com" class="text-white text-decoration-none d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/24/732/732200.png" alt="Email" class="me-2">Email
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/share/1PhYGnPvPu/" class="text-white text-decoration-none d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" class="me-2">Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mifta-rezkina-pardede-740822345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-white text-decoration-none d-flex align-items-center">
+                <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn" class="me-2">LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase">Langganan Newsletter</h5>
+          <p>Dapatkan info terbaru tentang fitur dan koleksi digital kami.</p>
+          <form>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Email Anda" required>
+              <button class="btn btn-light" type="submit">Langganan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="border-top border-light">
+
+      <div class="text-center mt-3">
+        &copy; 2025 Mifta Rezkina Pardede. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
